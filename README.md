@@ -1,10 +1,12 @@
 # DeepSeek API Proxy (TypeScript Version)
 
-A high-performance proxy server designed specifically to enable Cursor IDE's Composer to use DeepSeek's and OpenRouter's language models. This proxy translates OpenAI-compatible API requests to DeepSeek/OpenRouter API format.
-
 > **Note**: This project was inspired by [danilofalcao/cursor-deepseek](https://github.com/danilofalcao/cursor-deepseek).
 
 ## Why?
+
+As of today you can't use deepseek models in Cursor's Agent Composer (though you can use them in the "normal" composer). This will allow you to use `deepseek-chat` in agent mode.
+
+## Why this rewrite vs the original?
 
 This TypeScript version was created to:
 
