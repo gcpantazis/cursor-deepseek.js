@@ -57,7 +57,7 @@ The server will start on port 9000 by default.
 ngrok http 9000
 ```
 
-3. Use the proxy with your OpenAI API clients by setting the base URL to your ngrok HTTPS URL (e.g., `https://your-ngrok-url.ngrok.io/v1`)
+3. In Cursor Settings, point the OpenAI private key custom host to your ngrok HTTPS URL (e.g., `https://your-ngrok-url.ngrok.io/v1`), and as the key provide your DeepSeek API key.
 
 ### Supported Endpoints
 
@@ -67,7 +67,8 @@ ngrok http 9000
 ### Model Mapping
 
 - The proxy creates a `gpt-4o` model since Cursor IDE only allows the Composer agent to run for pre-approved models like `gpt-4o`
-- Under the hood, all requests are routed to DeepSeek's `deepseek-reasoner` model
+- Under the hood, all requests are routed to DeepSeek's `deepseek-chat` model
+- `deepseek-reasoner` (aka R1) does not work yet, as that model doesn't support [function calling](https://api-docs.deepseek.com/guides/function_calling)
 
 ## Features
 
